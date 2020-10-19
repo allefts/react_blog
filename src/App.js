@@ -1,4 +1,5 @@
 import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import "./App.css";
 import Header from "./header";
 import Nav from "./nav";
@@ -9,7 +10,14 @@ import { Grid } from "@material-ui/core";
 import { Spring } from "react-spring/renderprops";
 import Footer from "./footer";
 
-function App() {
+const useStyles = makeStyles({
+  gridMargin: {
+    marginBottom: "7rem",
+  },
+});
+
+const App = () => {
+  const classes = useStyles();
   return (
     <div className="App">
       <Header></Header>
@@ -29,7 +37,7 @@ function App() {
       </Spring>
       <Grid container style={{ height: "200px" }}></Grid>
       <Content></Content>
-      <Grid spacing={1} container>
+      <Grid className={classes.gridMargin} spacing={1} container>
         <MainCard card={`LEARN.`}></MainCard>
         <MainCard card={`TEACH.`}></MainCard>
         <MainCard card={`PROJECTS.`}></MainCard>
@@ -40,6 +48,6 @@ function App() {
       <Footer></Footer>
     </div>
   );
-}
+};
 
 export default App;

@@ -1,8 +1,7 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Dog from "./images/dog.jpg";
-import { TweenMax, Power3 } from "gsap";
 
 const useStyles = makeStyles({
   welcomeMessage: {
@@ -26,40 +25,32 @@ const useStyles = makeStyles({
     verticalAlign: "middle",
     clipPath: "circle(40%)",
   },
+  box: {
+    width: "500px",
+    height: "500px",
+    backgroundColor: "yellow",
+    margin: "10rem",
+  },
 });
 
 const Welcome = () => {
   const classes = useStyles();
-  let textAnimation = useRef(null);
-
-  useEffect(() => {
-    TweenMax.to(textAnimation, 0.8, {
-      opacity: 1,
-      y: -20,
-      ease: Power3.easeOut,
-    });
-  }, []);
 
   return (
     <div className={classes.root}>
       <Grid
         align="center"
         justify="center"
-        direction="column"
+        direction="row"
         className={classes.welcomeGrid}
         container
       >
-        <Grid item md={6} xs={12}>
-          <p
-            ref={(el) => {
-              textAnimation = el;
-            }}
-            className={classes.paper}
-          >
+        <Grid item xs={12} sm={6}>
+          <p className={classes.paper}>
             Welcome to my website, <br></br> feel free to take a look around!
           </p>
         </Grid>
-        <Grid className={classes.welcomePicture} item md={6} xs={12}>
+        <Grid className={classes.welcomePicture} item xs={12} sm={6}>
           <img
             className={classes.dogPicture}
             height="300"
@@ -67,12 +58,10 @@ const Welcome = () => {
             src={Dog}
             alt="Dog"
           />
-          {/* <p className={classes.paper}>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo,
-              harum.
-            </p> */}
         </Grid>
       </Grid>
+
+      <div className={classes.box}></div>
     </div>
   );
 };
