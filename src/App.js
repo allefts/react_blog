@@ -5,7 +5,6 @@ import Header from "./header";
 import Nav from "./nav";
 import Content from "./content";
 import MainCard from "./mainCard";
-import Welcome from "./welcome";
 import { Grid } from "@material-ui/core";
 import { Spring } from "react-spring/renderprops";
 import Footer from "./footer";
@@ -25,7 +24,7 @@ const App = () => {
       <Spring
         from={{ opacity: 0 }}
         to={{ opacity: 1 }}
-        config={{ delay: 500, duration: 1000 }}
+        config={{ delay: 100, duration: 1000 }}
       >
         {(props) => (
           <div style={props}>
@@ -37,13 +36,13 @@ const App = () => {
       </Spring>
       <Grid container style={{ height: "200px" }}></Grid>
       <Content></Content>
-      <Grid className={classes.gridMargin} spacing={1} container>
+      {/* <Grid className={classes.gridMargin} spacing={1} container>
         <MainCard card={`LEARN.`}></MainCard>
         <MainCard card={`TEACH.`}></MainCard>
         <MainCard card={`PROJECTS.`}></MainCard>
-      </Grid>
+      </Grid> */}
 
-      <Welcome></Welcome>
+      <MainCard currentUpdate="October 2020 Update:"></MainCard>
 
       <Footer></Footer>
     </div>

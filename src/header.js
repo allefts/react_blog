@@ -40,7 +40,7 @@ const Header = () => {
           >
             {(props) => (
               <div style={props}>
-                <div>
+                <div className={classes.waveContainer}>
                   <h1 className={classes.title}>Allefts.io</h1>
                 </div>
               </div>

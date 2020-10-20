@@ -1,6 +1,7 @@
 import React from "react";
 import { AppBar } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 
 const useStyles = makeStyles({
@@ -17,27 +18,39 @@ const useStyles = makeStyles({
 const Nav = () => {
   const classes = useStyles();
   return (
-    <div>
-      <AppBar
-        className={classes.navBar}
-        color="transparent"
-        style={{ margin: 0 }}
-        position="static"
-      >
-        <a className="links nav" href="/">
-          Home
-        </a>
-        <a className="links nav" href="/">
-          Blog
-        </a>
-        <a className="links nav" href="/">
-          About
-        </a>
-        <a className="links nav" href="/">
-          Contact
-        </a>
-      </AppBar>
-    </div>
+    <Router>
+      <div>
+        <AppBar
+          className={classes.navBar}
+          color="transparent"
+          style={{ margin: 0 }}
+          position="static"
+        >
+          <Link className="links nav" to="/">
+            Home
+          </Link>
+
+          <Link className="links nav" to="/blog">
+            Blog
+          </Link>
+
+          <Link className="links nav" to="/about">
+            About Me
+          </Link>
+
+          <Link className="links nav" to="/contact">
+            Contact
+          </Link>
+        </AppBar>
+
+        <Switch>
+          <Route path="/">{/* HOME PAGE */}</Route>
+          <Route path="/blog">{/* BLOG PAGE COMPONENT */}</Route>
+          <Route path="/about">{/* ABOUT PAGE COMPONENT */}</Route>
+          <Route path="/contact">{/* CONTACT PAGE COMPONENT */}</Route>
+        </Switch>
+      </div>
+    </Router>
   );
 };
 

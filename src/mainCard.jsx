@@ -6,7 +6,6 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   cardContent: {
-    textAlign: "center",
     fontSize: "2rem",
     padding: "5rem",
   },
@@ -18,19 +17,24 @@ const useStyles = makeStyles({
   card: {
     borderRadius: "0",
   },
+  bigLinks: {
+    fontSize: "4rem",
+    textDecoration: "underline",
+    textDecorationColor: "blue",
+  },
 });
 
-const MainCard = ({ card }) => {
+const MainCard = ({ currentUpdate }) => {
   const classes = useStyles();
   return (
-    <Grid item xs={12} sm={4}>
+    <Grid item xs={12} sm={12}>
       <Card className={classes.card}>
         <CardContent className={classes.cardContent}>
-          <a href="/" className="bigLinks">
-            {card}
-          </a>
+          <p className={classes.bigLinks}>{currentUpdate}</p>
         </CardContent>
-        <CardActions></CardActions>
+        <CardActions>
+          <a href="/">Last Updates</a>
+        </CardActions>
       </Card>
     </Grid>
   );
