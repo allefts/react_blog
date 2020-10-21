@@ -1,13 +1,19 @@
 body {
   margin: 0;
-  background: black;
+  padding: 0;
+  background: #000212;
   font-family: "Staatliches", cursive;
+  box-sizing: border-box;
 }
 
+/* FOOTER */
+.main {
+  min-height: 100vh;
+}
 /* NAVBAR LINKS */
 
 .links {
-  font-size: 4rem;
+  font-size: 3rem;
   text-decoration: none;
   color: black;
   position: relative;
@@ -16,9 +22,47 @@ body {
 .nav {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
-  color: white;
-  font-size: 2rem;
+  color: lightblue;
+  font-size: 1.5rem;
   position: relative;
+}
+
+.homeLink {
+  font-size: 2rem;
+}
+
+.homeLink:hover {
+  -webkit-animation: swing 1s ease;
+  animation: swing 1s ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+@keyframes swing {
+  15% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  30% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  65% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  80% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
 }
 
 .links:before {
@@ -28,7 +72,7 @@ body {
   height: 3px;
   bottom: 0;
   left: 0;
-  background-color: blue;
+  background-color: white;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out;
@@ -66,3 +110,5 @@ body {
 /* TITLE ANIMATION */
 
 /* CARD  */
+
+/* NAV LINKS */

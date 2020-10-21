@@ -4,11 +4,14 @@ import "./index.css";
 import App from "./App";
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "./themes";
+// import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
+      {/* <BrowserRouter> */}
       <App />
+      {/* </BrowserRouter> */}
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
