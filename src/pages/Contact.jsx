@@ -1,9 +1,10 @@
 import React from "react";
+import ContactContent from "../components/ContactComponents/Content";
 
 const Contact = () => {
   return (
     <div>
-      <h2 style={{ color: "yellow" }}>Contact Page</h2>
+      <ContactContent />
     </div>
   );
 };

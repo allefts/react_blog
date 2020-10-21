@@ -8,18 +8,30 @@ const useStyles = makeStyles({
   root: {
     flexGrow: 1,
   },
+  aboutHeaderWrapper: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+  },
+  aboutHeader: {
+    color: "white",
+    fontSize: "3rem",
+    textDecoration: "underline blue",
+  },
   aboutContent: {
     color: "lightblue",
     fontSize: "3rem",
   },
   aboutDescription: {
-    color: "lightblue",
+    color: "white",
     fontSize: "2rem",
     margin: "4rem",
   },
   pic: {
     borderRadius: "50%",
     margin: "4rem",
+    boxShadow: "3px 3px 5px 6px #000",
   },
 });
 
@@ -28,10 +40,21 @@ const Content = () => {
   return (
     <div className={classes.root}>
       <Grid container>
-        <Grid justify="center" container item xs={12}>
-          <img className={classes.pic} alt="Me" src={profPic} />
+        <Grid
+          className={classes.aboutHeaderWrapper}
+          justify="center"
+          container
+          item
+          xs={12}
+        >
+          <Grid xs={12} sm={6}>
+            <h3 className={classes.aboutHeader}>About Me</h3>
+          </Grid>
+          <Grid xs={12} item sm={6}>
+            <img item className={classes.pic} alt="Me" src={profPic} />
+          </Grid>
         </Grid>
-        <Grid justify="center" container item>
+        <Grid xs={12} justify="center" container item>
           <Typography className={classes.aboutDescription}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
             quibusdam labore et autem sunt porro praesentium. Quisquam
