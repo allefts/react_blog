@@ -18,7 +18,7 @@ const ContactContent = () => {
             </a>
           </li>
           <li className="contact links">
-            <a href="/">
+            <a href="/facebook.com">
               <FaFacebook />
               <span> Facebook</span>
             </a>
@@ -30,19 +30,19 @@ const ContactContent = () => {
             </a>
           </li>
           <li className="contact links">
-            <a href="/">
+            <a href="stackblitz.com">
               <AiFillThunderbolt />
               <span> StackBlitz</span>
             </a>
           </li>
           <li className="contact links">
-            <a href="/">
+            <a href="instagram.com">
               <AiFillInstagram />
               <span> Instagram</span>
             </a>
           </li>
           <li className="contact links">
-            <a href="/">
+            <a href="/Contact">
               <MdEmail />
               <span> alleftsoares@gmail.com</span>
             </a>

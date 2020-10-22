@@ -1,9 +1,10 @@
 import React from "react";
+import UpdateComponents from "../components/UpdateComponents/Content";
 
 const Updates = () => {
   return (
     <div>
-      <h2 style={{ color: "yellow" }}>Updates Page</h2>
+      <UpdateComponents />
     </div>
   );
 };
