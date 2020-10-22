@@ -47,11 +47,11 @@ const Content = () => {
           item
           xs={12}
         >
-          <Grid xs={12} sm={6}>
+          <Grid item xs={12} sm={6}>
             <h3 className={classes.aboutHeader}>About Me</h3>
           </Grid>
           <Grid xs={12} item sm={6}>
-            <img item className={classes.pic} alt="Me" src={profPic} />
+            <img className={classes.pic} alt="Me" src={profPic} />
           </Grid>
         </Grid>
         <Grid xs={12} justify="center" container item>
